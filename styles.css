@@ -1,0 +1,152 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+}
+
+#greetings {
+    text-align: center;
+}
+
+#flower-container.hidden {
+    display: none;
+}
+
+.flower {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+
+.petal {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fadeIn 2.5s forwards;
+}
+
+#petal1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 1s;
+}
+
+#petal2 {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    animation-delay: 1.5s;
+}
+
+#petal3 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 2s;
+}
+
+#petal4 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    animation-delay: 2.5s;
+}
+
+.stem {
+    position: absolute;
+    top: 425px; /* Adjusted position to be directly under the flower */
+    left: 50%;
+    width: 10px;
+    height: 150px; /* Adjusted height */
+    background-color: rgb(66, 46, 6);
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: growStem 2s forwards;
+    animation-delay: 3s;
+}
+
+.leaf {
+    position: absolute;
+    width: 70px; /* Adjusted size */
+    height: 35px; /* Adjusted size */
+    background-color: green;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+#leaf1 {
+    top: 475px; /* Adjusted position to be on the stem */
+    left: 45%;
+    transform: rotate(-30deg);
+    animation-delay: 3.5s;
+}
+
+#leaf2 {
+    top: 475px; /* Adjusted position to be on the stem */
+    left: 50%;
+    transform: rotate(30deg);
+    animation-delay: 4s;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes growStem {
+        from {
+            height: 0;
+            opacity: 0;
+        }
+        to {
+            height: 150px;
+            opacity: 1;
+        }
+}
